@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 echo "Checking formatting for $GITHUB_REPOSITORY"
-sh -c "yapf --style='{based_on_style: yapf, indent_width: 4}' $GITHUB_WORKSPACE $*"
+sh -c "yapf --recursive --in-place --style='{based_on_style: yapf, indent_width: 4}' $GITHUB_WORKSPACE $*"
